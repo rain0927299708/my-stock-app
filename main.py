@@ -34,7 +34,7 @@ def main(page: ft.Page):
                 ft.Container(
                     content=ft.Row([
                         ft.Column([ft.Text(stock['name'], size=16, weight=ft.FontWeight.BOLD), ft.Text(stock['id'], size=12, color=ft.Colors.GREY_400)], expand=True),
-                        # 修正語法：改用 ft.padding.symmetric
+                        # 這裡修正了語法：使用 ft.padding.symmetric
                         ft.Container(content=ft.Text(stock['predict'], size=12, weight=ft.FontWeight.BOLD), bgcolor=ft.Colors.GREY_800, padding=ft.padding.symmetric(horizontal=10, vertical=5), border_radius=5),
                         ft.IconButton(ft.Icons.CHEVRON_RIGHT, on_click=lambda e, s=stock: show_stock_detail(s))
                     ]),
