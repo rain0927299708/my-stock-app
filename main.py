@@ -64,4 +64,5 @@ def main(page: ft.Page):
 
 if __name__ == "__main__":
     port = int(os.getenv("PORT", 8080))
+    # 使用 run 替代舊的 app，並加入 view 設定以強制正確顯示
     ft.app(target=main, view=ft.AppView.WEB_BROWSER, host="0.0.0.0", port=port)
