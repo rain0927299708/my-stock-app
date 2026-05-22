@@ -62,12 +62,6 @@ def main(page: ft.Page):
     page.add(content_area)
     show_pool_page()
 
-# 這裡以下是幫您補上讓 Render 順利開網頁的關鍵啟動碼
 if __name__ == "__main__":
     port = int(os.getenv("PORT", 8080))
-    ft.app(
-        target=main,
-        view=ft.AppView.WEB_BROWSER,
-        host="0.0.0.0",
-        port=port
-    )
+    ft.app(target=main, host="0.0.0.0", port=port)
